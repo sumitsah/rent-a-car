@@ -1,0 +1,36 @@
+<div class="container">
+
+  <table class="table ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Car Name</th>
+        <th>Brand</th>
+        <th>Color</th>
+        <th>Model</th>
+        <th>Daily Price</th>
+        <th>Description</th>
+        <th>
+          <button routerLink="add" type="button" class="btn btn-outline-dark">+ Add</button>
+        </th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td>{{car.carId}}</td>
+        <td>{{car.carName}}</td>
+        <td>{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>
+        <td>{{car.modelYear}}</td>
+        <td>{{car.dailyPrice}}</td>
+        <td>{{car.description}}</td>
+        <td>
+          <button routerLink="edit/{{car.carId}}" type="button" class="btn btn-outline-info mx-2">Update</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
